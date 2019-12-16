@@ -1,0 +1,42 @@
+<h3>{{viewTitle}}</h3>
+<div>
+<div class="card">
+    <div class="card-body">
+<form action="/employee" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label> Nombre </label>
+        <input type="text" class="form-control" name="Nombre" placeholder="Nombre" value="{{employee.Nombre}}">
+        <div class="text-danger">
+            {{employee.NombreError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Apellido Paterno </label>
+        <input type="text" class="form-control" name="APaterno" placeholder="Apellido Paterno" value="{{employee.APaterno}}">
+        <div class="text-danger">
+            {{employee.APaternoError}}
+        </div>
+</div>
+    <div class="form-group">
+        <label> Apellido Materno </label>
+        <input type="text" class="form-control" name="AMaterno" placeholder="Apellido Materno" value="{{employee.AMaterno}}">
+        <div class="text-danger">
+            {{employee.AMaternoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Fecha Nacimiento</label>
+        <input type="date" class="form-control" name="FechaNacimiento" placeholder="Fecha Nacimiento" value="{{employee.FechaNacimiento}}">
+        <div class="text-danger">
+            {{employee.FechaNacimientoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secundary" href="/employee/list"><i class="fa fa-list-alt"></i>Ver Todos</a>
+    </div>
+</form>
+    </div>
+</div>
+</div>

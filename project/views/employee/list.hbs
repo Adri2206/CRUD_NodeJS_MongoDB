@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secundary" href="/"><i class="fa fa-plus"></i>Crear Nuevo</a>Lista de Empleados</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Fecha de Nacimiento</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Nombre}}</td>
+            <td>{{this.APaterno}}</td>
+            <td>{{this.AMaterno}}</td>
+            <td>{{this.FechaNacimiento}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                 <a href="/employee/delete/{{this._id}}" onclick="return confirm('¿Estás seguro de eliminar el siguiente empleado?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+               <a href=""></a> <i class="fa fa-print" style="font-size:21px" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
